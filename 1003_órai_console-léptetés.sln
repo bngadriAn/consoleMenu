@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1003_órai_console-léptetés", "1003_órai_console-léptetés.csproj", "{BA693E70-B459-4D12-AA6F-EA94E3FD1857}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA693E70-B459-4D12-AA6F-EA94E3FD1857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA693E70-B459-4D12-AA6F-EA94E3FD1857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA693E70-B459-4D12-AA6F-EA94E3FD1857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA693E70-B459-4D12-AA6F-EA94E3FD1857}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BAAA111-2537-4636-939A-E512AF5A5BEE}
+	EndGlobalSection
+EndGlobal
