@@ -1,4 +1,5 @@
-﻿using System.Security;
+﻿using System.Runtime.CompilerServices;
+using System.Security;
 using System.Security.Principal;
 
 namespace _1003_órai_console_léptetés
@@ -129,8 +130,8 @@ namespace _1003_órai_console_léptetés
             }
         }
         static int x = 3, y = 8, cursorPosX = 0, cursorPosY = 0, charNum = 1, colorNum=1;
-        static int charPosX = 0, charPosY = 0, getCharNum = 0, getColorNum = 0;
-        static string[] charAttributes = new string[Console.LargestWindowWidth*Console.LargestWindowHeight];
+        static int charPosX = 0, charPosY = 0, getCharNum = 0, getColorNum = 0, spacepress = 0;
+        static string charAttributes = "";
         static void DrawingApp()
         {
             string color = "Character color is: ";
@@ -181,10 +182,8 @@ namespace _1003_órai_console_léptetés
                         charPosY = cursorPosY;
                         getColorNum = colorNum;
                         getCharNum = charNum;
-                        for(int i = 0; i<charAttributes.Length; i++ )
-                        {
-                             charAttributes[i] = charPosX + "-" + charPosY + "-" + getColorNum + "-" + getCharNum;
-                        }
+                        charAttributes = (charPosX + "," + charPosY + "," + getColorNum + "," + getCharNum);
+                        spacepress++;
                         break;
                     case ConsoleKey.D1:
                         Console.ForegroundColor = ConsoleColor.White;
@@ -277,18 +276,13 @@ namespace _1003_órai_console_léptetés
         //file.read
         //file.write
         //static 
+        //entityframework core sql, core, design???? nemtudom
         static void SaveDrawing()
         {
             //date into filename
             string currentDate = DateTime.Now.ToString("MM_dd_yyyy");
-            StreamWriter sw = new StreamWriter(currentDate+".txt");
-            for(int i = 0; i<charAttributes.Length; i++)
-            {
-                if (charAttributes[i] != null)
-                {
-                    sw.WriteLine(charAttributes[i]);
-                }
-            }
+            //StreamWriter sw = new StreamWriter(@"D:\kdg_13a\drawing app files\" + currentDate + ".txt");
+            System.IO.File.WriteAllText(@"D:\kdg_13a\drawing app files\" + currentDate + ".txt", charAttributes);
             Console.SetCursorPosition(0, 6);
             Console.Write("File saved as '{0}'.txt",currentDate);
         }
